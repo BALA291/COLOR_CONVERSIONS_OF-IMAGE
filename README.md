@@ -37,8 +37,8 @@ Split and merge HSV Image
 
 ##### Program:
 ```
-### Developed By: S.JAIGANESH
-### Register Number: 212222240037
+### Developed By: B.BALAMURUGAN
+### Register Number: 212222230016
 ```
 <table>
   <tr>
