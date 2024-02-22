@@ -48,8 +48,9 @@ Split and merge HSV Image
 ```Python
 import cv2
 import numpy as np
-img=cv2.imread("eiffeltower.jpg")
-cv2.imshow("window",img)
+img=cv2.imread("bala.jpg")
+img=cv2.resize(img,(400,300))
+cv2.imshow("BALA",img)
 cv2.waitKey(0)
 ``` 
   </td>
@@ -57,7 +58,7 @@ cv2.waitKey(0)
 
 ### OUTPUT:
 
-![Screenshot (289)](https://github.com/Jaiganesh235/COLOR_CONVERSIONS_OF-IMAGE/assets/118657189/442b3dbd-310c-4fe1-8c78-a4e75ab31424)
+![o1](https://github.com/BALA291/COLOR_CONVERSIONS_OF-IMAGE/assets/120717501/878d7334-8e1b-4286-8554-b0cd17ff0f79)
 
   </td>
   </tr>
@@ -68,15 +69,15 @@ cv2.waitKey(0)
 ### ii)Write the image
 ```Python
 import cv2
-img=cv2.imread('eiffeltower.jpg')
-cv2.imwrite('paris.jpg',img)
+img=cv2.imread('bala.jpg')
+cv2.imwrite('bala.jpg',img)
 ```
   </td>
   <td>
 
 ### OUTPUT:
 
-![Screenshot (290)](https://github.com/Jaiganesh235/COLOR_CONVERSIONS_OF-IMAGE/assets/118657189/a4c8ac4c-ed3c-4ea3-a598-4c4cd4295af4)
+![o2](https://github.com/BALA291/COLOR_CONVERSIONS_OF-IMAGE/assets/120717501/9c4d899f-451a-4ed6-ae47-3d54dadd2260)
 
   </td>
   </tr>
@@ -86,14 +87,14 @@ cv2.imwrite('paris.jpg',img)
 ### iii)Shape of the Image
 ```Python
 import cv2
-img=cv2.imread('eiffeltower.jpg')
+img=cv2.imread('bala.jpg')
 print(img.shape)
 ```
   </td>
   <td>
 
 ### OUTPUT:
-![Screenshot (291)](https://github.com/Jaiganesh235/COLOR_CONVERSIONS_OF-IMAGE/assets/118657189/809e3b36-d123-4a4a-8837-b20a3325afc6)
+![o3](https://github.com/BALA291/COLOR_CONVERSIONS_OF-IMAGE/assets/120717501/c2cb485e-79e6-4b34-85a1-e2078c2e04af)
 
 
   </td>
@@ -105,13 +106,14 @@ print(img.shape)
 ```Python
 import cv2
 import random
-img=cv2.imread('eiffeltower.jpg')
+img=cv2.imread('bala.jpg')
+img=cv2.resize(img,(400,300))
 for i in range(150,200):
     for j in range(img.shape[1]):
         img[i][j]=[random.randint(0,255),
                   random.randint(0,255),
                   random.randint(0,255)]
-cv2.imshow('img',img)
+cv2.imshow('BALA',img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
@@ -119,7 +121,7 @@ cv2.destroyAllWindows()
   <td width="50%">
 
 ### OUTPUT:
-![Screenshot (292)](https://github.com/Jaiganesh235/COLOR_CONVERSIONS_OF-IMAGE/assets/118657189/336efc58-a8f3-432c-a62a-b570dfd3eed3)
+![o4](https://github.com/BALA291/COLOR_CONVERSIONS_OF-IMAGE/assets/120717501/7749a954-2237-4b68-8e6a-9d08c7f3b980)
 
   </td>
   </tr>
@@ -130,10 +132,11 @@ cv2.destroyAllWindows()
 
  ```Python
 import cv2
-img=cv2.imread('eiffeltower.jpg')
+img=cv2.imread('bala.jpg')
+img=cv2.resize(img,(400,300))
 tag=img[150:200,110:160]
 img[110:160,150:200]=tag
-cv2.imshow('paris1',img)
+cv2.imshow('bala',img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
@@ -142,7 +145,7 @@ cv2.destroyAllWindows()
     
 ### OUTPUT:
 
-![Screenshot (293)](https://github.com/Jaiganesh235/COLOR_CONVERSIONS_OF-IMAGE/assets/118657189/6357e70e-f148-4ebe-ae84-5bc88cad3c57)
+![o5](https://github.com/BALA291/COLOR_CONVERSIONS_OF-IMAGE/assets/120717501/0986740f-f6de-43c1-b895-7e5eae89cad6)
 
   </td>
   </tr>
@@ -151,8 +154,9 @@ cv2.destroyAllWindows()
 ### vi) BGR and RGB to HSV and GRAY
 ```Python
 import cv2
-img = cv2.imread('eiffeltower.jpg',1)
-cv2.imshow('Paris2',img)
+img = cv2.imread('bala.jpg',1)
+img=cv2.resize(img,(400,300))
+cv2.imshow('bala1',img)
 
 hsv1 = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
 cv2.imshow('BGR2HSV',hsv1)
@@ -171,13 +175,16 @@ cv2.destroyAllWindows()
 ```
 
 ### OUTPUT:
-![Screenshot (294)](https://github.com/Jaiganesh235/COLOR_CONVERSIONS_OF-IMAGE/assets/118657189/67b2d842-0a63-43cc-a1b4-0ca1dc6c592a)
+![o6i](https://github.com/BALA291/COLOR_CONVERSIONS_OF-IMAGE/assets/120717501/5a9429da-612a-4dcc-a27d-acb41c645890)
+![o6ii](https://github.com/BALA291/COLOR_CONVERSIONS_OF-IMAGE/assets/120717501/8be73f3d-1533-4a13-883b-7814af55ded7)
+
 
 
 ### vii) HSV to RGB and BGR
 ```Python
 import cv2
-img = cv2.imread('eiffeltower.jpg')
+img = cv2.imread('bala.jpg')
+img=cv2.resize(img,(400,300))
 
 img = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
 cv2.imshow('Original HSV Image',img)
@@ -194,14 +201,15 @@ cv2.destroyAllWindows()
 
 ### OUTPUT:
 
-![Screenshot (295)](https://github.com/Jaiganesh235/COLOR_CONVERSIONS_OF-IMAGE/assets/118657189/5426875a-fe70-479e-b834-76019182c807)
+![o7](https://github.com/BALA291/COLOR_CONVERSIONS_OF-IMAGE/assets/120717501/7aae6acc-364a-4d56-8577-27e8871d2791)
 
 
 
 ### viii) RGB and BGR to YCrCb
 ```Python
 import cv2
-img = cv2.imread('eiffeltower.jpg')
+img = cv2.imread('bala.jpg')
+img=cv2.resize(img,(400,300))
 cv2.imshow('Original RGB Image',img)
 
 YCrCb1 = cv2.cvtColor(img, cv2.COLOR_BGR2YCrCb)
@@ -216,15 +224,15 @@ cv2.destroyAllWindows()
 
 ### OUTPUT:
 
-![Screenshot (296)](https://github.com/Jaiganesh235/COLOR_CONVERSIONS_OF-IMAGE/assets/118657189/df16a437-f9b8-4f06-8e0a-7bfa47639201)
+![o8](https://github.com/BALA291/COLOR_CONVERSIONS_OF-IMAGE/assets/120717501/b789d4f4-4f90-45ac-8950-5436b1193063)
 
 
 
 ### ix) Split and merge RGB Image
 ```Python
 import cv2
-img = cv2.imread('eiffeltower.jpg')
-
+img = cv2.imread('bala.jpg')
+img=cv2.resize(img,(400,300))
 R = img[:,:,2]
 G = img[:,:,1]
 B = img[:,:,0]
@@ -241,7 +249,9 @@ cv2.destroyAllWindows()
 ```
 
 ### OUTPUT:
-![Screenshot (297)](https://github.com/Jaiganesh235/COLOR_CONVERSIONS_OF-IMAGE/assets/118657189/9e2ca3e4-d940-4a11-91dc-7bf8b637f016)
+![o9i](https://github.com/BALA291/COLOR_CONVERSIONS_OF-IMAGE/assets/120717501/d6482206-ec61-411d-b090-107261d9f3e8)
+
+![o9ii](https://github.com/BALA291/COLOR_CONVERSIONS_OF-IMAGE/assets/120717501/25daf117-de11-4c1a-9764-53a0c7cde683)
 
 
 
@@ -249,7 +259,7 @@ cv2.destroyAllWindows()
 ### x) Split and merge HSV Image
 ```Python
 import cv2
-img = cv2.imread("eiffeltower.jpg")
+img = cv2.imread("bala.jpg")
 img = cv2.resize(img,(300,200))
 img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)
 
@@ -268,7 +278,7 @@ cv2.destroyAllWindows()
 
 ### OUTPUT:
 
-![Screenshot (298)](https://github.com/Jaiganesh235/COLOR_CONVERSIONS_OF-IMAGE/assets/118657189/917853e5-a286-4a84-98f5-fd5dca7df42b)
+![o10](https://github.com/BALA291/COLOR_CONVERSIONS_OF-IMAGE/assets/120717501/7d27a2d6-5a9f-4a82-a933-6f555c4f9b86)
 
 
 ## Result:
